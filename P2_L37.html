@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <title>L37_P2</title>
+        <style>
+            table{
+                margin:auto;
+            }
+            table, th, td{
+                border:2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <hgroup>
+                <img src="image.jpg" alt="food bank" width="100" height="100" align="left"/>
+                <h1 align="center" style="color:darkgreen"><strong>ABC Food Bank</strong></h1>
+                <h2 align="right" style="color:red"><i>Nourishing Communities: Bridging the food gap</i></h2>
+            </hgroup>
+            <nav>
+                <a href="/home/">Home</a>
+                <a href="/About-Us/">About Us</a>
+                <a href="/Volunteer/">Volunteer</a>
+                <a href="/Contact Us/">Contact Us</a>
+            </nav>
+        </header>
+
+        <section class="container">
+            <article>
+                <header>
+                    <h1>Food Banking#1</h1>
+                </header>
+                <section>
+                    India food Banking addresses the issues of hunger and malnutrition through a network of FoodBanks. We bring together the private sector, not for profit organizations, government, and academia to support vulnerable communities and malnourished children with our emergency food assistance and nourishment programs.
+                </section>
+            </article>
+
+            <article>
+                <header>
+                    <h1>Donate Food #2</h1>
+                </header>
+                <section>
+                    Companies producing packaged foods on scale can donate good quality surplus products with adequate shelf life to India FoodBanking Network which the food banks can efficiently distribute to people facing food insecurity.
+                </section>
+            </article>
+        </section>
+
+        <section class="container form-container">
+            <aside>
+            <section>
+                <h3>Feedback Form</h3>
+                <FORM action="1.html" method="post" enctype="text/plain">
+                    Name:<INPUT type="text" name="firstname" placeholder="Enter name here">
+                    <br>
+                    <input type="radio" name="gender" value="male">Male<br>
+                    <input type="radio" name="gender" value="female">Female<br>
+                    Comment:<br>
+                    <textarea rows="6" cols="50" name="commentfield"></textarea><br>
+                    <input type="submit" value="Send Feedback">
+                    <input type="reset" value="reset">
+                </FORM>
+            </section>
+            <figure align="center">
+                <img width="185" height="185" src="image.jpg" alt="foodbar">
+                <figcaption align="center"><span>Food Donation</span></figcaption>
+            </figure>
+        </aside>
+        </section>
+        <hr width="80%" color="red"> 
+        <section class="container">
+            <table>
+                <tr>
+                    <th>Header Column 1</th>
+                    <th>Header Column 2</th>
+                    <th>Header Column 3</th>
+                    <th>Header Column 4</th>
+                </tr>
+                <tr>
+                    <td rowspan="1">Row 2- item 1</td>
+                    <td rowspan="1">Row 2- item 2</td>
+                    <td rowspan="2">
+                        Row 2- Nested Table 1
+                        <table>
+                            <tr>
+                                <th>Row 1 Header</th>
+                                <td>Item</td>
+                            </tr>
+                            <tr>
+                                <th>Row 2 Header</th>
+                                <td>Item</td>
+                            </tr>
+                            <tr>
+                                <th>Row 3 Header</th>
+                                <td>Item</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        Row 2- item 4<br>
+                        A second Line
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Row 3- Nested Table 1
+                        <table>
+                            <tr>
+                                <th>Row 1 Header</th>
+                                <td>Item</td>
+                            </tr>
+                            <tr>
+                                <th>Row 2 Header</th>
+                                <td>Item</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Asp.Net</li>
+                            <li>Csharp</li>
+                            <li>VB.Net</li>
+                        </ul>
+                    </td>
+                    <td rowspan="2" align="center"><img src="photo.jpg" alt="My Photo" width="100" height="100"></td>
+                </tr>
+                <tr>
+                    <td>Row 4- item 1</td>
+                    <td>Row 4- item 2</td>
+                    <td>Row 4- item 3</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Last row of the main table</td>
+                </tr>
+            </table>
+        </section>
+        <hr width="80%" color="red"> 
+        <br>
+        <section class="container">
+            <fieldset class="personal-info">
+                <legend>Personal Info</legend>
+                <form action="">
+                    <label for="first name">First Name:</label>
+                    <input type="text" id="first name"><br>
+                    <label for="last name">Last Name:</label>
+                    <input type="text" id="last name">
+                </form>
+            </fieldset>
+
+            <fieldset class="course-info">
+                <legend>Course Information</legend>
+                <form action="">
+                    <input type="radio" id="sql">
+                    <label for="sql">SQL</label><br>
+                    <input type="radio" id="prgm">
+                    <label for="prgm">Programming</label><br>
+                    <input type="radio" id="web">
+                    <label for="web">Web Development</label><br>
+                </form><br>
+                <label for="career">Career Goal</label>
+                <select name="career" id="career">
+                    <option>Analyst</option>
+                    <option>Consultant</option>
+                    <option>Developer</option>
+                    <option>Programmer</option>
+                </select>
+                <form action="">
+                    <input type="checkbox">
+                    <label for="">UNIX</label><br>
+                    <input type="checkbox">
+                    <label for="">VIM</label><br>
+                    <input type="checkbox">
+                    <label for="">HTML</label><br>
+                    <input type="checkbox">
+                    <label for="">CSS</label><br>
+                    <input type="checkbox">
+                    <label for="">Javascript</label><br>
+                    <input type="checkbox">
+                    <label for="">Python</label><br>
+                    <label for="">Say about the other Skills you possess:</label><br>
+                    <input style="width:75%; height:10vh" placeholder="Say here" type="text">
+                </form>
+            </fieldset>
+            <button>Enter my information</button>
+        </section>
+
+        <footer>
+            <div>
+                <p align="center">
+                    <a href="https://www.geeksforgeeks.org">
+                        <img src="image.jpg" alt="donate" width="300" height="132">
+                    </a>
+                </p>
+            </div>
+        </footer>
+
+    </body>
+</html>
