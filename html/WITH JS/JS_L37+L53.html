@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_L37+L53</title>
+    <style>
+         body {
+            color: #333333;
+            font-family: 'Times New Roman', arial;
+            margin: 0%;
+            padding: 0;
+            text-align: center;
+        }
+        h1, h2 {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            font-weight: bold;
+            color: #ffcc77;
+            font-size: 40px;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 20px;
+            font-weight: lighter;
+            color: #218;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding:10px 20px;
+            background-color: rgba(2, 255, 25, 0.1);
+            border-radius: 15px;
+        }
+        nav a {
+            color: #ffcc00;
+            text-decoration: underline dashed;
+            font-size: 22px;
+            margin: 20px;
+            font-weight: bold;
+        }
+        section {
+            padding: 10px;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+        }
+        .your_form label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 1em; 
+        }
+        .your_form input, .your_form textarea {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-left: 0px;
+            border: 2px solid #ffcc00;
+            border-radius: 8px;
+            background-color: #a8c0ff;
+            color: #333;
+            font-size: 17px; 
+        }
+        .your_form button {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 1.2em;
+        }
+        #txtar, #txt, #fieldadd, #pref {
+            background-color: #ff1111;
+            color: #000;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 1px;
+            margin-right: 1px;
+            width: 11%;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #162447;
+            color: #ffcc00;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        footer p {
+            border: #27f solid 2px;
+            margin:0px;
+            color: #fff;
+        }
+        #blog h3 {
+            font-size: 35px;
+            font-weight: bold;
+            color: #ff6f61;
+            text-align: center;
+        }
+        #blog p {
+            font-size: 25px;
+            line-height: 1.6;
+            color: #333;
+            text-align: justify;
+            padding: 0 20px;
+        } 
+        #msg {
+            color: #49c;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WEB PROGRAMMING WITH HTML, CSS AND JAVASCRIPT</h1>
+    <p>EXPLORING WEB PROGRAMMING WITH THIS ACTIVITY</p>
+    
+    <div class="container">
+        <nav>
+            | <a href="#blog">Blog</a> | <a href="#yours">Your Us</a> |
+        </nav>
+        <section id="blog" class="blog">
+            <h2>Blog</h2>
+            <h3>Exploring the Beauty of Nature</h3>
+         <p>Nature offers an endless array of wonders that captivate the senses and soothe the soul. From the rustling of leaves in a gentle breeze to the vibrant hues of a sunset, every element of the natural world tells a story. Exploring forests, mountains, and oceans reveals the intricate balance that sustains life on our planet. Taking time to appreciate nature not only brings peace and inspiration but also fosters a deep respect for the environment.</p>
+        <img src = "IMAGE.jpg" width="50%" alt="nature pic">
+        </section>
+        <section id="yours" class="yours">
+            <h2>Your Area</h2>
+            <form class="your_form" id="your_form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" onchange="chng()" >
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" >
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" >
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" >
+                
+                <label for="message">Feedback Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Enter your feedback"></textarea>
+                <button type="button" id="pref" onclick="showPreferences()">Add Preferences</button>
+                <button type="button" id="txtar" onclick="feed()">Not interested</button>
+                <button type="button" id="fieldadd" onclick="addfieldset()">Add Fieldset</button>
+                <button type="button" id="txt" onclick="names()">Random names</button>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <p id="msg"></p>
+    </div>
+    <script>
+        let def = {name: "Not Provided", email: "NotProvided@ex.com", phone: "000000000", dob: "2001-01-01", message: "Good"};
+
+        function feed() {
+        document.getElementById("name").value = def.name;
+        document.getElementById("email").value = def.email;
+        document.getElementById("phone").value = def.phone;
+        document.getElementById("dob").value = def.dob;
+        document.getElementById("message").value = def.message;
+        }
+
+        const arr = ["LeafWhisperer", "OceanBlow", "MistyMeadow", "ForestPulse"];
+        function names() {
+        let word = arr.map(name => name + "<br>").join("");
+        document.getElementById("msg").innerHTML = word;
+        }
+
+        function chng() {
+        if (document.getElementById("msg").innerHTML !== "") {
+        document.getElementById("msg").innerHTML = "";
+        }
+        }
+
+        const form = document.getElementById("your_form");
+        form.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const num = document.getElementById("phone").value.trim();
+        const dat = document.getElementById("dob").value;
+        
+        if (name === "" || email === "" || num === "" || !dat) {
+        alert("Fill all the fields!");
+        return; 
+        }
+
+        if (!email.includes("@")) {
+        alert("Give a valid email!");
+        return; 
+        }
+
+        alert("Form submitted successfully!");
+        form.submit(); 
+        });
+
+        const links = document.getElementsByTagName("a");
+        Array.from(links).forEach(l => {
+        l.onmouseover = function () {
+        l.style.color = "rgb(10, 60, 100)";
+        };
+        l.onmouseout = function () {
+        l.style.color = "#ffcc00";
+        };
+        });
+        function addfieldset() {
+            const form = document.getElementById("your_form");
+            if (document.getElementById("field1")) {
+                alert("Fieldset already exists!");
+                return;
+            }
+            const fieldset = document.createElement("fieldset");
+            fieldset.id = "field1";
+            fieldset.style.marginTop = "10px";
+            fieldset.style.borderRadius = "10px";
+            const legend = document.createElement("legend");
+            legend.textContent = "Additional Information";
+            fieldset.appendChild(legend);
+            const fields = [
+                { label: "Address", type: "text", id: "address" },
+                { label: "City", type: "text", id: "city" },
+                { label: "ZIP Code", type: "number", id: "zip" }
+            ];
+            fields.forEach(field => {
+                const label = document.createElement("label");
+                label.textContent = field.label + ":";
+                const input = document.createElement("input");
+                input.type = field.type;
+                input.id = field.id;
+                input.name = field.id;
+                input.placeholder = "Enter your " + field.label.toLowerCase();
+                label.appendChild(input);
+                fieldset.appendChild(label);
+            });
+            const removeBtn = document.createElement("button");
+            removeBtn.type = "button";
+            removeBtn.textContent = "Remove Fieldset";
+            removeBtn.onclick = function () {
+                form.removeChild(fieldset);
+            };
+            fieldset.appendChild(removeBtn);
+            form.appendChild(fieldset);
+        }
+        function showPreferences() {
+            const container = document.getElementById("your_form");
+            if (document.getElementById("preferencesBox")) return;
+
+            const prefDiv = document.createElement("div");
+            prefDiv.id = "preferencesBox";
+
+            const title = document.createElement("h3");
+            title.textContent = "Your Preferences";
+            prefDiv.appendChild(title);
+
+            const radioLabel = document.createElement("p");
+            radioLabel.innerHTML = "<strong>Contact Method:</strong><br>";
+            prefDiv.appendChild(radioLabel);
+
+            const radio1 = document.createElement("input");
+            radio1.type = "radio";
+            radio1.name = "contact";
+            radio1.value = "Email";
+            radio1.id = "Email";
+            const label1 = document.createElement("label");
+            label1.htmlFor = "Email";
+            label1.textContent = "Email";
+            prefDiv.appendChild(radio1);
+            prefDiv.appendChild(label1);
+            prefDiv.appendChild(document.createElement("br"));
+
+            const radio2 = document.createElement("input");
+            radio2.type = "radio";
+            radio2.name = "contact";
+            radio2.value = "Phone";
+            radio2.id = "Phone";
+            const label2 = document.createElement("label");
+            label2.htmlFor = "Phone";
+            label2.textContent = "Phone";
+            prefDiv.appendChild(radio2);
+            prefDiv.appendChild(label2);
+            prefDiv.appendChild(document.createElement("br"));
+
+            const checkboxLabel = document.createElement("p");
+            checkboxLabel.innerHTML = "<strong>Interests:</strong><br>";
+            prefDiv.appendChild(checkboxLabel);
+
+            const checkbox1 = document.createElement("input");
+            checkbox1.type = "checkbox";
+            checkbox1.name = "interest";
+            checkbox1.value = "Nature Photography";
+            checkbox1.id = "photo";
+            const label3 = document.createElement("label");
+            label3.htmlFor = "photo";
+            label3.textContent = "Nature Photography";
+            prefDiv.appendChild(checkbox1);
+            prefDiv.appendChild(label3);
+            prefDiv.appendChild(document.createElement("br"));
+
+            const checkbox2 = document.createElement("input");
+            checkbox2.type = "checkbox";
+            checkbox2.name = "interest";
+            checkbox2.value = "Riding";
+            checkbox2.id = "ride";
+            const label4 = document.createElement("label");
+            label4.htmlFor = "ride";
+            label4.textContent = "Riding";
+            prefDiv.appendChild(checkbox2);
+            prefDiv.appendChild(label4);
+            prefDiv.appendChild(document.createElement("br"));
+
+            const removeBtn = document.createElement("button");
+            removeBtn.type = "button";
+            removeBtn.textContent = "Remove Preferences";
+            removeBtn.onclick = () => container.removeChild(prefDiv);
+            prefDiv.appendChild(removeBtn);
+
+            container.appendChild(prefDiv);
+        }
+
+    </script>
+    <footer>
+        <p>Thank you for visiting! We will reach out to you soon.</p>
+    </footer>
+</body>
+</html>
