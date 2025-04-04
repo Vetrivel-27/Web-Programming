@@ -3,8 +3,15 @@ import { AiOutlineHome, AiOutlineUser, AiOutlineMail, AiOutlineCode } from "reac
 
 function NavBar({ navigateTo }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const styles = {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 900
+  }
   return (
-    <nav className="navbar">
+    <nav className="navbar" style = {styles}>
       <div className="navContainer">
         <ul className={menuOpen ? "navLinksOpen" : "navLinks"}>
           <li>

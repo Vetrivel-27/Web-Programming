@@ -9,8 +9,9 @@ function Home() {
             github: 'https://www.github.com/vetrivel-27'
         }
     }
+
     return(
-    <section className='homeSection'>
+    <section className='homeSection' style={{marginTop:'30px'}}>
             <div className='homeTitle'>
             <h1 className='homeTitle'>Hi, <br/> Im <span className='text-black'>VETRIVEL S</span> 
                 <p className='homeSubtitle'>{config.subtitle}</p>

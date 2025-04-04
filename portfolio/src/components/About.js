@@ -7,16 +7,16 @@ function About() {
         line4: 'I have certain knowledge in languages such as asm, c, c++, java, react, html and css.'
     }
     return (
-        <section className='about-section' id='about'>
-            <div className='about-image'>
-                <img className="about-img" src={AboutImg} alt="About" />
+        <section className='aboutsection' id='about' style={{marginTop:"80px"}}>
+            <div className='aboutimage'>
+                <img className="aboutimg" src={AboutImg} alt="About" />
             </div>
-            <div className='about-content'>
-                <h1 className='about-title'>About Me</h1>
-                <p className='about-text'>{config.line1}</p>
-                <p className='about-text'>{config.line2}</p>
-                <p className='about-text'>{config.line3}</p>
-                <p className='about-text'>{config.line4}</p>
+            <div className='aboutcontent'>
+                <h1 className='abouttitle'>About Me</h1>
+                <p className='abouttext'>{config.line1}</p>
+                <p className='abouttext'>{config.line2}</p>
+                <p className='abouttext'>{config.line3}</p>
+                <p className='abouttext'>{config.line4}</p>
             </div>
         </section>
     );
