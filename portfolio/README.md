@@ -22,7 +22,7 @@ Preloader: Shows a loading screen before rendering the site.
 
 Animated Background: Adds a visual effect with moving dots.
 
-Technologies Used
+Language Used
 
 React.js (Component-based structure)
 
@@ -80,15 +80,8 @@ The contact form ensures valid name and email input.
 
 Skills are displayed with styling and hover effects.
 
-The website is responsive and works on different screen sizes.
-
-License
-
-This project is for learning purposes. You are free to use and modify it.
 
 Author
 
 Vetrivel S
-
-For any queries, feel free to contact me through the form on the website.
 
