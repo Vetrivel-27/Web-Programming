@@ -34,7 +34,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/vetrivel-27/Web-Programming/portfolio.git
 
 Navigate to the project folder:
 
