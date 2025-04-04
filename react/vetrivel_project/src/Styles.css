@@ -1,0 +1,199 @@
+/*Home*/
+.homeSection {
+  display: flex;
+  flex-direction: row;
+  padding: 80px 100px;
+  justify-content: center;
+}
+.homeTitle {
+  color: orange;
+  font-size: 60px;
+  font-family: 'YourHeroFont', sans-serif;
+}
+.homeSubtitle {
+  font-size: 24px;
+}
+.socialIcons {
+  display: flex;
+  padding: 40px 0;
+}
+.socialIcon {
+  padding-right: 20px;
+  transition: color 0.3s;
+  color:blue;
+}
+.socialIcon:hover {
+  color: violet;
+}
+.homeImage {
+  padding:80px 20px;
+  width: 20%;
+  height:150px;
+}
+
+
+/* about */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #2d3748;
+  text-align: center;
+}
+
+.about-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #edf2f4;
+}
+
+.about-title {
+  font-size: 2.25rem;
+  border-bottom: 4px solid #3b82f6;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.about-text {
+  padding-bottom: 20px;
+}
+
+/*contact*/
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  margin-top: 40px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+input, textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 18px;
+}
+button:hover {
+  background-color: #0056b3;
+}
+/*Navbar*/
+.navLinks button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.navLinks button:hover {
+  background-color: #007bff;
+  color: white;
+}
+.navbar {
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.stickyNav {
+  background-color: #333;
+  color: #fff;
+}
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.brand .logo {
+  height: 40px;
+}
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navLinks li {
+  display: inline;
+}
+.navLinks a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.navLinks a:hover {
+  color: #007bff;
+}
+
+/*Skills*/
+.techicons {
+    font-size: 4.5em ;
+    margin: 10px ;
+    padding: 10px ;
+    opacity: 0.93 ;
+    border: 1.7px solid rgba(200, 137, 230, 0.637) ;
+    vertical-align: middle ;
+    text-align: center ;
+    border-radius: 5px ;
+    display: inline-block ; /* Changed from table to inline-block */
+    box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) ;
+    overflow: hidden ;
+    transition: all 0.4s ease 0s ;
+}
+
+.techicons:hover {
+    transform: scale(1.05) ;
+    overflow: hidden ;
+    border: 2.2px solid rgba(197, 115, 230, 0.883) ;
+}
+
+/*Footer*/
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
