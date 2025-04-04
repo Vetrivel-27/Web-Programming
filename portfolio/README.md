@@ -52,26 +52,6 @@ Open the website in your browser at:
 
 http://localhost:3000
 
-Folder Structure
-
-portfolio-website/
-│── src/
-│   ├── components/
-│   │   ├── Navbar.js
-│   │   ├── Home.js
-│   │   ├── About.js
-│   │   ├── Skills.js
-│   │   ├── Contact.js
-│   │   ├── Footer.js
-│   │   ├── Preloader.js
-│   │   ├── DotBackground.js
-│   ├── App.js
-│   ├── index.js
-│   ├── Styles.css
-│── public/
-│── package.json
-│── README.md
-
 Usage
 
 Users can navigate through the sections using the navbar.
